@@ -3,15 +3,16 @@ import { useSearchParams } from 'next/navigation';
 
 const VideoPlayer = () => {
   const [searchParams] = useSearchParams();
+  const videoSrc = searchParams.get('video'); // Supondo que 'video' é a chave para a URL do vídeo
 
   return (
-  <>
-  {searchParams &&
-    <video controls width="250">
-      <source src={searchParams} type="application/x-mpegURL" />
-      Seu navegador não suporta vídeos m3u8.
-    </video>
-    }
+    <>
+      {videoSrc &&
+        <video controls width="250">
+          <source src={videoSrc} type="application/x-mpegURL" />
+          Seu navegador não suporta vídeos m3u8.
+        </video>
+      }
     </>
   );
 };
