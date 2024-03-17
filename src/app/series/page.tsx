@@ -1,3 +1,4 @@
+'use client'
 import { useSearchParams } from 'next/navigation';
 
 const VideoPlayer = () => {
@@ -5,7 +6,7 @@ const VideoPlayer = () => {
 
   return (
   <>
-  {params &&
+  {searchParams &&
     <video controls width="250">
       <source src={searchParams} type="application/x-mpegURL" />
       Seu navegador não suporta vídeos m3u8.
