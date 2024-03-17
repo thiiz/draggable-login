@@ -1,7 +1,7 @@
 'use client'
 
 const VideoPlayer = ({ searchParams }) => {
-  const videoSrc = searchParams.?video
+  const videoSrc = searchParams?.video
 
   return (
     <>
