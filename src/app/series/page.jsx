@@ -1,9 +1,7 @@
 'use client'
-import { useSearchParams } from 'next/navigation';
 
-const VideoPlayer = () => {
-  const [searchParams] = useSearchParams();
-  const videoSrc = searchParams.get('video'); // Supondo que 'video' é a chave para a URL do vídeo
+const VideoPlayer = ({ searchParams }) => {
+  const videoSrc = searchParams.?video
 
   return (
     <>
